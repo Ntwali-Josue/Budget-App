@@ -10,12 +10,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_03_15_140400) do
+ActiveRecord::Schema[7.0].define(version: 2022_03_15_152044) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "categories", force: :cascade do |t|
+    t.bigint "user_id"
+    t.string "Name"
+    t.string "icon"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id", "Name"], name: "index_categories_on_user_id_and_Name", unique: true
+  end
+
+  create_table "transactions", force: :cascade do |t|
+    t.bigint "AuthorId"
+    t.string "Name"
+    t.integer "Amount"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["AuthorId", "Name"], name: "index_transactions_on_AuthorId_and_Name", unique: true
+  end
+
   create_table "users", force: :cascade do |t|
-    t.string "name" 
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "email", default: "", null: false
@@ -27,4 +45,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_03_15_140400) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "categories", "users"
+  add_foreign_key "transactions", "users", column: "AuthorId"
 end
