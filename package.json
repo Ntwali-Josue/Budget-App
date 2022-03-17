@@ -24,5 +24,8 @@
     "stylelint-scss": "^3.21.0",
     "webpack": "^5.70.0",
     "webpack-dev-server": "3"
+  },
+  "engines": {
+    "node": "14.X"
   }
 }
