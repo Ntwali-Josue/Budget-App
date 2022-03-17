@@ -1,37 +1,53 @@
-# curriculum-databases-projects-template
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-> This template should be used for database related projects at Microverse.
-> Generate your own repository, update this README and edit all files content while working on projects. You should not be adding any new files unless asked otherwise.
+# Budget App
 
+> In this project,I create a mobile budget application, where a user can manage your budget. A user can have a list of transactions associated with a category, so that he can see how much money he spent and on what.
 
+## Built With
+
+- Ruby
+- Ruby On Rails
+- Ruby Gems
+- PostgreSQL
+- Rubocop
 ## Getting Started
 
-This repository includes files with plain SQL that can be used to recreate a database:
+To get a local copy up and running follow these simple example steps.
 
-- Use [schema.sql](./schema.sql) to create all tables.
-- Use [data.sql](./data.sql) to populate tables with sample data.
-- Check [queries.sql](./queries.sql) for examples of queries that can be run on a newly created database. **Important note: this file might include queries that make changes in the database (e.g., remove records). Use them responsibly!**
+### Prerequisites 📌
+- `Ruby`
+- `Ruby on Rails` 
+- `Ruby Gems` 
+- `PostgreSQL`
+### Setup 🔂 
+- Clone the repository using this [GitHub](https://github.com/Ntwali-Josue/Budget-App.git) link.
+- `cd` into the directory
+### Install ⚙️
+- Run `bundle install`
+### Database 💾
+- Run `rails db:create` to create the database.
+- Run `rails db:migrate` to create the tables.
+- Run `rails db:seed` to populate the tables.
+### Usage 💻
+- Run `rails s` to start the server.
 
+### Testing 🔎
+- Run `rspec` to run the tests.
+- Run `rubocop` to run the linters.
+## Author
 
-## Authors
+👤 **KARANGWA Ntwali Josue**
 
-👤 **Author1**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [Ntwali-Josue](https://github.com/Ntwali-Josue)
+- Twitter: [Ntwali-Josue](https://twitter.com/JosueNtwali)
+- LinkedIn: [Ntwali-Josue](https://linkedin.com/in/karangwa)
 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/Ntwali-Josue/Budget-app/issues).
 
 ## Show your support
 
@@ -39,9 +55,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- Original designs by Gregoire Vella on Behance
 
 ## 📝 License
 
