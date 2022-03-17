@@ -23,7 +23,7 @@ class CategoriesController < ApplicationController
   # GET /categories/1/edit
   def edit; end
 
-  # POST /categories or /categories.json
+  # POST /categories
   def create
     @category = current_user.categories.new(category_params)
 
