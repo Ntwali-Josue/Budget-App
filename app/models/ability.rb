@@ -1,13 +1,14 @@
-# frozen_string_literal: true
-
 class Ability
   include CanCan::Ability
 
   def initialize(user)
-    can :manage User, id: user.id
-    can :manage Category, author: user
-    can :manage Activity, author: user
-    
+    return unless user.present?
+
+    can :manage, Category, author: user
+    can :manage, Entity, author: user
+    can :manage, User, id: user.id
+    can :manage, CategoryTransaction, category_id: { author_id: user.id }
+
     # Define abilities for the passed in user here. For example:
     #   user ||= User.new # guest user (not logged in)
     #   if user.admin?

@@ -1,10 +1,17 @@
-<p style="color: green"><%= notice %></p>
-
-<%= render @category %>
-
 <div>
-  <%= link_to "Edit this category", edit_category_path(@category) %> |
-  <%= link_to "Back to categories", categories_path %>
+  <%= render partial: "_partials/header", locals: { title: "Your Transactions", back_path: categories_path} %>
+  <%= render partial: "_partials/category_header", locals: { category: @category, category_transactions: @category_transactions } %>
 
-  <%= button_to "Destroy this category", @category, method: :delete %>
+  <div class="text-center">
+    <%if @category_transactions.empty? %>
+    <h2 class="fw-bold mt-5 display-6">There Is No Transactions</h2>
+    <p class="mt-3 display-7">Try to add one with the below button</p>
+    <%else%>
+      <h2 class="fw-bold mt-5 display-6">Recent Transactions</h2>
+      <% @category_transactions.each do |category_transaction|%>
+          <%= render partial: "_partials/cards/transaction", locals: { category_transaction: category_transaction } %>
+      <%end%>
+    <%end%>
+  </div>
+    <%= render partial: "_partials/buttons/add_new_item", locals: { label: "Add Transaction", new_path: new_entity_path } %>
 </div>

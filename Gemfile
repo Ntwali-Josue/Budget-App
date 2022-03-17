@@ -9,14 +9,29 @@ gem 'rails', '~> 7.0.2', '>= 7.0.2.3'
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem 'sprockets-rails'
 
+# use bootsrap
+gem 'bootstrap', '~> 4.4.1'
+
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 1.1'
 
 # use devise gem
 gem 'devise'
 
+# use rubocop gem
+gem 'rubocop'
+
+# use bulma rails
+gem 'bulma-rails', '~> 0.9.2'
+
+# use sass rails
+gem 'sass-rails', '>= 6'
+
 # use cancan gem
 gem 'cancancan'
+
+# use fontawesome rails
+gem 'font-awesome-rails'
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem 'puma', '~> 5.0'
@@ -49,7 +64,10 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 gem 'bootsnap', require: false
 
 # Use Sass to process CSS
-# gem "sassc-rails"
+gem 'sassc-rails'
+
+# use webpack
+gem 'webpacker', '~> 5.0'
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
@@ -57,6 +75,8 @@ gem 'bootsnap', require: false
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri mingw x64_mingw]
+  gem 'rails-controller-testing'
+  gem 'rspec-rails', '~> 5.0.0'
 end
 
 group :development do
