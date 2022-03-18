@@ -10,10 +10,10 @@ gem 'pg', '~> 1.1'
 # Use Puma as the app server
 gem 'jbuilder', '~> 2.7'
 gem 'puma', '~> 5.0'
+gem 'rake'
 gem 'sass-rails', '>= 6'
 gem 'turbolinks', '~> 5'
 gem 'webpacker', '~> 5.0'
-gem 'rake'
 
 gem 'bootsnap', '>= 1.4.4', require: false
 
