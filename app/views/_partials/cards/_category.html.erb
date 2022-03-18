@@ -1,0 +1,16 @@
+<div class="card m-3">
+  <div class="g-0 category-card justify-content-center d-flex">
+    <div class="w-25">
+      <%= image_tag(category.icon, alt: "category icon", class: "category-icon") %>
+    </div>
+    <div class="w-50 mx-3">
+      <div class="card-body">
+        <h5 class="card-title display-7 fw-bold"><%= category.name %></h5>
+      </div>
+      <span class="category-date font-italic font-weight-light"><%= category.created_at.strftime("%d/%m/%Y")%></span>
+    </div>
+    <div class="w-25 m-4 pl-4">
+      <h4 class="category-total">$ <%= total_amount(category.category_transactions) %></h4>
+    </div>
+  </div>
+</div>

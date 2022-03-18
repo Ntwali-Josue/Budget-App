@@ -1,0 +1,181 @@
+@import "font-awesome";
+// @import "bootstrap";
+
+body {
+  overflow-x: hidden;
+  box-sizing: border-box;
+  height: 100vh;
+  min-width: 100vw;
+  padding: 0;
+  margin: 0;
+}
+
+.btn-add {
+  min-width: 100%;
+  padding: 20px 0;
+  background-color: #5fb523;
+  color: white !important;
+  margin-top: 300px;
+
+  span {
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 10px 85px;
+  }
+
+  &:hover {
+    background-color: #7fb956;
+  }
+}
+
+.mobile-header {
+  background-color: #3778c2;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  height: 80px;
+
+  .header-title {
+    font-family: montserrat, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    margin-left: 30px;
+  }
+
+  .back-button {
+    i {
+      color: white;
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.navbar-devise {
+  justify-content: left !important;
+}
+
+.margin-nav {
+  margin: 10px;
+}
+
+.font-weight-1 {
+  font-weight: 400;
+}
+
+.font-weight-2 {
+  font-weight: 600;
+}
+
+.navbar {
+  min-height: 50px;
+}
+
+.navbar a {
+  color: #343a40;
+}
+
+.left-padding-nav {
+  padding-left: 30px;
+}
+
+.center-div {
+  margin: auto;
+  width: 60%;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.align-items {
+  align-items: center;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.text-align-left {
+  text-align: left;
+}
+
+.margin-top-nav {
+  margin-top: 5%;
+}
+
+.margin-bottom-login {
+  margin-bottom: 20px;
+}
+
+.notice-p {
+  color: green;
+}
+
+.alert-p {
+  color: red;
+}
+
+.center_content {
+  text-align: center;
+}
+
+.flex-row {
+  display: flex;
+  align-items: center;
+}
+
+.recipe_data {
+  margin: auto;
+  justify-content: space-between;
+}
+
+.public_data {
+  margin: auto;
+  justify-content: space-evenly;
+}
+
+.justify-content {
+  justify-content: space-between;
+}
+
+.recipe-info {
+  width: 100%;
+  min-height: 120px;
+  margin: 20px 20px 20px 20px;
+  border: solid 1px gray;
+  gap: 20%;
+  justify-content: space-between;
+  padding: 0 40px 0 40px;
+}
+
+#recipe {
+  font-size: 40px;
+}
+
+.recipe_desc {
+  align-self: end;
+  margin-bottom: 20px;
+  font-size: 20px;
+  padding: 15px;
+}
+
+.add-button-margins {
+  margin: 20px 20px;
+}
+
+.float-right {
+  float: right !important;
+}
+
+.clear {
+  clear: both;
+}
+
+.margin-table {
+  padding: 20px;
+}

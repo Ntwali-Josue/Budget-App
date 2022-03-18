@@ -1,3 +1,13 @@
-<div>
-  Hiiii broo
+<div class="bg-image splash-bg shadow-1-strong rounded d-flex justify-content-center align-items-end">
+  <div class="sign_in_container text-center">
+    <% if user_signed_in? %>
+      <h1 class="welcome-title m-5 font-weight-bold">Welcome  <%= current_user.name.capitalize%>, You are signed in</h1>
+      <%= link_to 'Go To Categories', categories_path, class: "login-btn btn mb-4 btn-primary", id: "go-categories" %> <br>
+      <%= link_to 'LOG OUT', destroy_user_session_path, method: :delete, class: "btn btn-danger text-white mb-2" %>
+    <%else%>
+      <h1 class="m-5">Budget App</h1>
+      <%= link_to 'LOG IN', new_user_session_path, class: "btn btn-primary mb-4 py-3" %><br>
+      <%= link_to 'SIGN UP', new_user_registration_path, class: "btn btn-success text-white mb-2 py-3" %>
+    <%end%>
+  </div>
 </div>
