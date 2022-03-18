@@ -1,4 +1,4 @@
-class CreateCategoryTransactions < ActiveRecord::Migration[7.0]
+class CreateCategoryTransactions < ActiveRecord::Migration[6.1]
   def change
     create_table :category_transactions do |t|
 
